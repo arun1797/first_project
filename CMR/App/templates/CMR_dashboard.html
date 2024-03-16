@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>CRM Home</title>
+</head>
+<style>
+ footer {
+        text-align: center;
+        padding: 30px 0;
+        color: black;
+        /* position: absolute; */
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .card {
+        /* width: 14rem; */
+        transition: transform 0.3s ease;
+        margin: auto;
+        /* Add transition effect on transform */
+    }
+
+    .card:hover {
+        transform: scale(1.1) translateZ(50px);
+        /* Increase size of the card on hover */
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-warning-subtle">
+        <div class="container">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CRM
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Finance</a></li>
+                <li><a class="dropdown-item" href="#">Sales</a></li>
+                <li><a class="dropdown-item" href="#">Marketing</a></li>
+                <li><a class="dropdown-item" href="#">Website</a></li>
+                <li><a class="dropdown-item" href="#">Service</a></li>
+                <li><a class="dropdown-item" href="#">Productivity</a></li>
+                <li><a class="dropdown-item" href="#">Human Resource</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'CMR_home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'CMR_archive'%}">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'CMR_dashboard' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ********** -->
+    <h2 class="text-center mt-4">Dash Board</h2>
+    <div class="container text-center mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <div class="card-body">
+                        <img src="https://media.istockphoto.com/id/1186939091/vector/growth-arrow-icon-in-flat-style-revenue-vector-illustration-on-white-isolated-background.jpg?s=612x612&w=0&k=20&c=6TRe3ZAEdxMZpbPO8wu1DsKRoejeXBSPj91KPfgbBmY="
+                            width="70px" height="70px" alt="" style="margin-right: 150px;">
+                        <h5 class="card-title" style="color: green; text-align: right;">Revenue</h5>
+
+                        <h5 class="card-text" style="color: lightslategrey;text-align: right;">$654</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <div class="card-body">
+                        <img src="https://thumbs.dreamstime.com/b/sales-growth-graph-hand-drawing-marker-transparent-wipe-board-92307566.jpg"
+                            width="70px" height="70px" alt="" style="margin-right: 150px;">
+                        <h5 class="card-title" style="color: orange; text-align: right;">Sales</h5>
+
+                        <h5 class="card-text" style="color: lightslategrey;text-align: right;">5500</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <div class="card" style="width: 14rem;">
+                        <div class="card-body">
+                            <img src="https://media.istockphoto.com/id/1284067597/vector/bill-icon-vector-design-trendy.jpg?s=612x612&w=0&k=20&c=KVbUt3tk5kih3vsV8vj4SgJIHm61QCIGPUtIP1X_MFg="
+                                width="70px" height="70px" alt="" style="margin-right: 150px;">
+                            <h5 class="card-title" style="color: red; text-align: right;">Orders</h5>
+
+                            <h5 class="card-text" style="color: lightslategrey;text-align: right;">3300</h5>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <div class="card" style="width: 14rem;">
+                        <div class="card-body">
+                            <img src="https://png.pngtree.com/png-vector/20190316/ourmid/pngtree-employee-icon-design-template-vector-isolated-png-image_856368.jpg"
+                               width="70px" height="70px" alt="" style="margin-right: 150px;">
+                            <h5 class="card-title" style="color: darkred; text-align: right;">Employees</h5>
+    
+                            <h5 class="card-text" style="color: lightslategrey;text-align: right;">1489</h5>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *********** -->
+    <div class="container mt-4" style="display: flex;flex-direction: row;align-items: center;">
+        <div class="" style="flex: 1;padding: 20px;">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Pushkin_population_history.svg" class="img-fluid" alt="">
+        </div>
+        <div class="image" style="flex: 1;padding: 20px;text-align: center; ">
+            <img src="https://wcs.smartdraw.com/chart/img/basic-bar-graph.png?bn=15100111913"
+                class="img-fluid" alt="">
+        </div>
+    </div>
+    <!-- ***** -->
+    <div class="container px-4 py-4" id="featured-3">
+        <h2 class="pb-2 border-bottom" style="color: darkred;">This Month Stars</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+              <img src="https://kidzartworx.com.au/wp-content/uploads/2017/01/circle-man.png" height="100px" alt="">
+            </div>
+            <h3 class="fs-2 text-body-emphasis">H Vinoth</h3>
+            <h5 style="color:slategray;">Web Developer</h5>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+                <img src="https://i1.wp.com/radialcircle.com/wp-content/uploads/2017/02/avatar-round-1.png?fit=364%2C364&ssl=1" height="100px" alt="">
+              </div>
+            <h3 class="fs-2 text-body-emphasis">Abirami Ramesh</h3>
+            <h5 style="color:slategray;">Digital Marketing</h5>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+                <img src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png" height="100px" alt="">
+              </div>
+            <h3 class="fs-2 text-body-emphasis">Vetrimaran</h3>
+            <h5 style="color:slategray;">Web Designer</h5>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ************* -->
+      
+    
+
+<!-- *************-->
+<div class="container">
+    <div class="message mt-3" id="message1">
+        <img src="https://i1.wp.com/radialcircle.com/wp-content/uploads/2017/02/avatar-round-1.png?fit=364%2C364&ssl=1" height="50" alt="">
+        <label>Message 1</label>
+        <button class="btn btn-primary ml-auto" onclick="archiveMessage('message1')">Archive</button>
+    </div>
+    <div class="message mt-3" id="message2">
+        <img src="https://www.seekpng.com/png/full/627-6279537_circle-invest-welcomes-monero-portrait-circle.png" height="50" alt="">
+        <label>Message 2</label>
+        <button class="btn btn-primary ml-auto" onclick="archiveMessage('message2')">Archive</button>
+    </div>
+    <div class="message mt-3" id="message3">
+        <img src="https://www.vhv.rs/dpng/d/551-5511364_circle-profile-man-hd-png-download.png" height="50" alt="">
+        <label>Message 3</label>
+        <button class="btn btn-primary ml-auto" onclick="archiveMessage('message3')">Archive</button>
+    </div>
+
+
+    <div id="messageContainer"></div>
+    
+    <h2 id="archiveHeading" class="mt-4">Archived Messages</h2>
+    <div id="archiveMessages"></div>
+    
+    <a href="{% url 'CMR_archive' %}" class="btn btn-warning mt-4">View Archived Messages</a>
+</div>
+
+<script>
+    var allMessages = {
+        message1: {
+            content: "Message 1",
+            imageUrl: "https://i1.wp.com/radialcircle.com/wp-content/uploads/2017/02/avatar-round-1.png?fit=364%2C364&ssl=1"
+        },
+        message2: {
+            content: "Message 2",
+            imageUrl: "https://www.seekpng.com/png/full/627-6279537_circle-invest-welcomes-monero-portrait-circle.png"
+        },
+        message3: {
+            content: "Message 3",
+            imageUrl: "https://www.vhv.rs/dpng/d/551-5511364_circle-profile-man-hd-png-download.png         "
+        },
+    
+    };
+
+    var archivedMessages = JSON.parse(localStorage.getItem('archivedMessages')) || {};
+    function removeArchivedMessages() {
+            for (var messageId in archivedMessages) {
+                var messageDiv = document.getElementById(messageId);
+                if (messageDiv) {
+                    messageDiv.remove();
+                }
+            }
+        }
+
+
+    function archiveMessage(messageId) {
+        var message = allMessages[messageId];
+        var messageDiv = document.getElementById(messageId);
+        messageDiv.remove(); 
+        var messageContainer = document.getElementById('messageContainer');
+        messageContainer.style.display = 'block';
+        messageContainer.innerText = 'Message archived: ' + message.content;
+
+        archivedMessages[messageId] = message;
+        localStorage.setItem('archivedMessages', JSON.stringify(archivedMessages));
+    }
+
+    function undoArchive() {
+        var messageContainer = document.getElementById('messageContainer');
+        messageContainer.style.display = 'none';
+
+        for (var messageId in archivedMessages) {
+            var messageDiv = document.createElement('div');
+            var message = archivedMessages[messageId];
+            messageDiv.classList.add('message', 'mt-3');
+            messageDiv.id = messageId;
+            var img = document.createElement('img');
+            img.src = message.imageUrl;
+            img.alt = 'Message Image';
+            img.height = 50;
+            var label = document.createElement('label');
+            label.textContent = message.content;
+            var button = document.createElement('button');
+            button.classList.add('btn', 'btn-primary', 'ml-auto');
+            button.textContent = 'Archive';
+            button.onclick = function() {
+                archiveMessage(messageId);
+            };
+            messageDiv.appendChild(img);
+            messageDiv.appendChild(label);
+            messageDiv.appendChild(button);
+            document.querySelector('.container').appendChild(messageDiv);
+        }
+
+        archivedMessages = {};
+        localStorage.removeItem('archivedMessages');
+    }
+</script>
+
+
+    <!-- ****** -->
+
+    <footer class="bg-warning-subtle mt-4">
+        <p>&copy; 2024 CRM Company. All rights reserved.</p>
+        <nav>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">FAQs</a>
+        </nav>
+        <div class="social-icons mt-3">
+            <a href="#"><img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/023/986/613/small_2x/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png"
+                    width="40px" height="40px" alt="Facebook"></a>
+            <a href="#"><img src="https://freepngimg.com/save/62860-logo-twitter-computer-icons-free-photo-png/512x512"
+                    width="40px" height="40px" alt="Twitter"></a>
+            <a href="#"><img
+                    src="https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-three-dimensional-instagram-icon-png-image_6618437.png"
+                    width="40px" height="40px" alt="Instagram"></a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
